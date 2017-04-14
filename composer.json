@@ -13,8 +13,11 @@
     },
     "require": {
         "php": ">=5.5.9",
+        "alcaeus/mongo-php-adapter": "^1.0",
         "doctrine/doctrine-bundle": "^1.6",
         "doctrine/doctrine-cache-bundle": "^1.2",
+        "doctrine/mongodb-odm": "^1.0",
+        "doctrine/mongodb-odm-bundle": "^3.0",
         "doctrine/orm": "^2.5",
         "incenteev/composer-parameter-handler": "^2.0",
         "sensio/distribution-bundle": "^5.0",
@@ -64,5 +67,8 @@
         "branch-alias": {
             "dev-master": "3.2-dev"
         }
+    },
+    "provide": {
+        "ext-mongo": "1.6.14"
     }
 }
