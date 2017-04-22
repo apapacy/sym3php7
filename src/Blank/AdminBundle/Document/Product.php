@@ -5,6 +5,9 @@ use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
 
 /**
  * @MongoDB\Document
+ * @MongoDB\Indexes({
+ *   @MongoDB\Index(keys={"name"="asc", "price"="asc"})
+ * })
  */
 class Product
 {

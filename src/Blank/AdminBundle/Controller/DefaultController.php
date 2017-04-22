@@ -22,13 +22,13 @@ class DefaultController extends Controller
     public function testAction()
     {
         $dm = $this->get('doctrine_mongodb')->getManager();
-        for ($i = 0; $i < 10000; $i++) {
+        for ($i = 0; $i < 100000; $i++) {
           $product = new Product();
           $product->setName("A Foo Bar - $i");
           $product->setPrice('19.99');
           $dm->persist($product);
-          $dm->flush();
         }
+        $dm->flush();
         return $this->render('BlankAdminBundle:Default:index.html.twig');
     }
 }
