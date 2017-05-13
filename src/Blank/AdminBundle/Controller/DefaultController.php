@@ -9,7 +9,7 @@ use Blank\AdminBundle\Document\Product;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/")
+     * @Route("/hello")
      */
     public function indexAction()
     {
