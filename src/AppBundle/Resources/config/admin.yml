@@ -4,7 +4,7 @@ services:
     #    arguments: ['@another_service_name', 'plain_value', '%parameter_name%']
     admin.category:
         class: AppBundle\Admin\CategoryAdmin
-        arguments: [~, AppBundle\Entity\Category, ~]
+        arguments: [~, AppBundle\Entity\Category, AppBundle:CRUD]
         tags:
             - { name: sonata.admin, manager_type: orm, label: Category}
         calls:

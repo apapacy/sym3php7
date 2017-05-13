@@ -59,6 +59,7 @@ sonata_admin:
                 label_catalogue: AppBundle
                 items:
                     - admin.blog_post
+                    - admin.category
             app.admin.group.misc: ~
 
 
