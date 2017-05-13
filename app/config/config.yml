@@ -42,6 +42,26 @@ sonata_block:
         sonata.admin.block.admin_list:
             contexts: [admin]
 
+sonata_admin:
+    title:      Acme
+    title_logo: bundles/app/images/link-arrow.png
+    security:
+        # the default value
+        handler: sonata.admin.security.handler.noop
+        # use this service if you want ACL
+        handler: sonata.admin.security.handler.noop
+    options:
+        form_type: standard
+    dashboard:
+         groups:
+            app.admin.group.content:
+                label: app.admin.group.content
+                label_catalogue: AppBundle
+                items:
+                    - admin.blog_post
+            app.admin.group.misc: ~
+
+
 # Twig Configuration
 twig:
     debug: '%kernel.debug%'
