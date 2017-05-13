@@ -17,3 +17,11 @@ services:
             - { name: sonata.admin, manager_type: orm, label: Blog post}
         calls:
             - [ setTranslationDomain, [AppBundle]]
+
+    admin.product:
+        class: AppBundle\Admin\ProductAdmin
+        arguments: [~, AppBundle\Document\Product, AppBundle:CRUD]
+        tags:
+            - { name: sonata.admin, manager_type: doctrine_mongodb, label: Product}
+        calls:
+            - [ setTranslationDomain, [AppBundle]]

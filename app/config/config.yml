@@ -60,6 +60,7 @@ sonata_admin:
                 items:
                     - admin.blog_post
                     - admin.category
+                    - admin.product
             app.admin.group.misc: ~
 
 
@@ -89,7 +90,7 @@ doctrine:
         path:     "%database_path%"
 
       development:
-        driver:   pdo_mysql
+        driver:   pdo_pgsql
         host:     "%database_host%"
         port:     "%database_port%"
         dbname:   "%database_name%"
@@ -131,7 +132,7 @@ doctrine_mongodb:
             metadata_cache_driver: array
             #auto_mapping: true
             mappings:
-              BlankAdminBundle:
+              AppBundle:
                 type: annotation
                 dir: Document
                 #prefix: 'AcmeStoreBundle:Entity'
