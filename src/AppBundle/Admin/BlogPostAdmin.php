@@ -20,10 +20,16 @@ class BlogPostAdmin extends AbstractAdmin
         ->end()
         ->tab('Pudlish Options')
             ->with('Meta data', array('class' => 'col-md-3'))
-                ->add('category', 'sonata_type_model', array(
+            //->add('category',  'sonata_type_model_list', array())
+            ->add('category', 'sonata_type_model_autocomplete', array(
                     'class' => 'AppBundle\Entity\Category',
                     'property' => 'name',
+                    'required' => true
                 ))
+//                ->add('category', 'sonata_type_model', array(
+//                    'class' => 'AppBundle\Entity\Category',
+//                    'property' => 'name',
+//                ))
             ->end()
         ->end()
         ;
@@ -33,12 +39,13 @@ class BlogPostAdmin extends AbstractAdmin
     {
         $listMapper
             ->addIdentifier('title')
-            ->add('category', null, array(
-              'associated_property'  => 'id'
-            ), 'entity', array(
-                'class'    => 'AppBundle\Entity\Category',
-                'choice_label' => 'name', // In Symfony2: 'property' => 'name'
-            ))
+            ->add('category.name')
+            //->add('category', null, array(
+            //  'associated_property'  => 'name'
+            //), 'entity', array(
+            //    'class'    => 'AppBundle\Entity\Category',
+            //    'choice_label' => 'name', // In Symfony2: 'property' => 'name'
+            //))
             ->add('draft')
         ;
     }
@@ -47,10 +54,15 @@ class BlogPostAdmin extends AbstractAdmin
     {
         $datagridMapper
             ->add('title')
-            ->add('category', null, array( ), 'entity', array(
+            ->add('category', 'doctrine_orm_model_autocomplete', array('label' => 'AutoComplete'), null, array(
+            // in related CategoryAdmin there must be datagrid filter on `title` field to make the autocompletion work
                 'class'    => 'AppBundle\Entity\Category',
-                'choice_label' => 'name', // In Symfony2: 'property' => 'name'
+                'property'=>'name',
             ))
+            //->add('category', null, array( ), 'entity', array(
+            //    'class'    => 'AppBundle\Entity\Category',
+            //    'choice_label' => 'name', // In Symfony2: 'property' => 'name'
+            //))
         ;
     }
 

@@ -22,4 +22,11 @@ class CategoryAdmin extends AbstractAdmin
     {
         $listMapper->addIdentifier('name');
     }
+
+    public function toString($object)
+    {
+        return $object instanceof \AppBundle\Entity\Category
+            ? $object->getName()
+            : 'Category'; // shown in the breadcrumb on the create view
+    }
 }

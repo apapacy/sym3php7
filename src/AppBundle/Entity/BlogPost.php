@@ -45,6 +45,7 @@ class BlogPost
 
     /**
      * @ORM\ManyToOne(targetEntity="Category", inversedBy="blogPosts")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $category;
 
