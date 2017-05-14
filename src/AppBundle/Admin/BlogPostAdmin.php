@@ -20,16 +20,18 @@ class BlogPostAdmin extends AbstractAdmin
         ->end()
         ->tab('Pudlish Options')
             ->with('Meta data', array('class' => 'col-md-3'))
-            //->add('category',  'sonata_type_model_list', array())
-            ->add('category', 'sonata_type_model_autocomplete', array(
-                    'class' => 'AppBundle\Entity\Category',
-                    'property' => 'name',
-                    'required' => true
-                ))
-//                ->add('category', 'sonata_type_model', array(
-//                    'class' => 'AppBundle\Entity\Category',
-//                    'property' => 'name',
-//                ))
+            ->add('category',  'sonata_type_model_list', array())
+            // Самый лучший способ
+            //->add('category', 'sonata_type_model_autocomplete', array(
+            //        'class' => 'AppBundle\Entity\Category',
+            //        'property' => 'name',
+            //        'required' => true
+            //    ))
+              // Nfr yt длеать для боьших списков
+              //  ->add('category', 'sonata_type_model', array(
+              //      'class' => 'AppBundle\Entity\Category',
+              //      'property' => 'name',
+              //  ))
             ->end()
         ->end()
         ;
