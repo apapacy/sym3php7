@@ -80,6 +80,9 @@ class Category
 
     public function __toString()
     {
+        if (!$this->getName()) {
+          return '';
+        }
         return $this->getName();
     }
 }

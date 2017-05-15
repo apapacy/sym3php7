@@ -9,6 +9,9 @@ use Sonata\AdminBundle\Show\ShowMapper;
 
 class BlogPostAdmin extends AbstractAdmin
 {
+
+    protected $parentAssociationMapping = 'category';
+
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper

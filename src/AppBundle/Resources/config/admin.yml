@@ -9,6 +9,7 @@ services:
             - { name: sonata.admin, manager_type: orm, label: Category}
         calls:
             - [ setTranslationDomain, [AppBundle]]
+            - [ addChild, ["@admin.blog_post"]]
 
     admin.blog_post:
         class: AppBundle\Admin\BlogPostAdmin

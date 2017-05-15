@@ -18,6 +18,27 @@ class CategoryAdmin extends AbstractAdmin
         $datagridMapper->add('name');
     }
 
+    protected function configureSideMenu(\Knp\Menu\ItemInterface $menu, $action, \Sonata\AdminBundle\Admin\AdminInterface $childAdmin = null)
+    {
+        if (!$childAdmin && !in_array($action, array('edit'))) {
+            return;
+        }
+
+        $admin = $this->isChild() ? $this->getParent() : $this; // ????????????????????
+
+        $id = $admin->getRequest()->get('id');
+
+        $menu->addChild(
+                'Voir/Editer',
+                array('uri' => $admin->generateUrl('edit', array('id' => $id)))
+            );
+
+        $menu->addChild(
+                'Services',
+                array('uri' => $admin->generateUrl('admin.blog_post.list', array('id' => $id)))
+            );
+    }
+
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper->addIdentifier('name');
