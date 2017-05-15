@@ -41,6 +41,24 @@ sonata_block:
         # enable the SonataAdminBundle block
         sonata.admin.block.admin_list:
             contexts: [admin]
+        sonata.block.service.text:
+            contexts:   [admin]
+        sonata.block.service.rss:
+            contexts:   [admin]
+
+        # Some specific block from the SonataMediaBundle
+        #sonata.media.block.media:
+        #sonata.media.block.gallery:
+        #sonata.media.block.feature_media:
+
+        # Some block with different templates
+        #acme.demo.block.demo:
+        #    templates:
+        #       - { name: 'Simple', template: 'AcmeDemoBundle:Block:demo_simple.html.twig' }
+        #       - { name: 'Big',    template: 'AcmeDemoBundle:Block:demo_big.html.twig' }
+
+
+
 
 sonata_admin:
     title:      Acme
@@ -53,6 +71,27 @@ sonata_admin:
     options:
         form_type: standard
     dashboard:
+         blocks:
+              -
+                  position: left
+                  type: sonata.admin.block.admin_list
+              -
+                  position: right
+                  type: sonata.block.service.text
+                  settings:
+                      content: >
+                          <h2>Welcome to the Sonata Admin</h2>
+                          <p>This is a <code>sonata.block.service.text</code> from the Block
+                          Bundle, you can create and add new block in these area by configuring
+                          the <code>sonata_admin</code> section.</p> <br /> For instance, here
+                          a RSS feed parser (<code>sonata.block.service.rss</code>):
+              -
+                  position: right
+                  type: sonata.block.service.rss
+                  #roles: [POST_READER]
+                  settings:
+                      title: Sonata Project's Feeds
+                      url: https://sonata-project.org/blog/archive.rss
          groups:
             app.admin.group.content:
                 label: app.admin.group.content
@@ -62,7 +101,6 @@ sonata_admin:
                     - admin.category
                     - admin.product
             app.admin.group.misc: ~
-
 
 # Twig Configuration
 twig:
