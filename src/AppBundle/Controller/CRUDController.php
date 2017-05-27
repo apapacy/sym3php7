@@ -38,6 +38,7 @@ class CRUDController extends BaseController
         $request = $this->getRequest();
         $uri_parts = explode('?', $request->getUri(), 2);
         $filters = $this->admin->getFilterParameters();
+        print_r($uri_parts);
         $this->get('session')->set('last_list', array('uri' => $uri_parts[0], 'filters' => $filters));
 
         $response = parent::listAction($request);

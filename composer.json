@@ -11,6 +11,13 @@
         "psr-4": { "Tests\\": "tests/" },
         "files": [ "vendor/symfony/symfony/src/Symfony/Component/VarDumper/Resources/functions/dump.php" ]
     },
+    "minimum-stability": "dev",
+    "repositories": [
+      {
+        "type": "vcs",
+        "url": "https://github.com/apapacy/SonataAdminBundle.git"
+      }
+    ],
     "require": {
         "php": ">=5.5.9",
         "alcaeus/mongo-php-adapter": "^1.0",
@@ -22,7 +29,7 @@
         "incenteev/composer-parameter-handler": "^2.0",
         "sensio/distribution-bundle": "^5.0",
         "sensio/framework-extra-bundle": "^3.0.2",
-        "sonata-project/admin-bundle": "^3.18",
+        "sonata-project/admin-bundle": "3.x-dev#7a0af6a114723f1dd58340e3639c54f205508021",
         "sonata-project/block-bundle": "^3.3",
         "sonata-project/doctrine-mongodb-admin-bundle": "3.x-dev",
         "sonata-project/doctrine-orm-admin-bundle": "^3.1",
