@@ -19,7 +19,7 @@ class Schema extends AbstractSchema
                 'args'    => [
                     'name' => [
                         'type' => new StringType(),
-                        'default' => 'Stranger'
+                        'defaultValue' => 'Stranger'
                     ]
                 ],
                 'resolve' => function ($context, $args) {
@@ -30,4 +30,3 @@ class Schema extends AbstractSchema
     }
 
 }
-

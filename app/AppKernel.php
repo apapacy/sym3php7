@@ -26,6 +26,7 @@ class AppKernel extends Kernel
             new Sonata\DoctrineMongoDBAdminBundle\SonataDoctrineMongoDBAdminBundle(),
             new Sonata\AdminBundle\SonataAdminBundle(),
             new Sonata\BlockBundle\SonataBlockBundle(),
+            new Overblog\GraphQLBundle\OverblogGraphQLBundle(),
             new AppBundle\AppBundle(),
             new Blank\AdminBundle\BlankAdminBundle(),
 
