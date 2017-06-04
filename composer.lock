@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "70e9b4b779258cd7e311539894c0ab46",
+    "content-hash": "09dc39e41f486be2aa1cd729b433a646",
     "packages": [
         {
             "name": "alcaeus/mongo-php-adapter",
@@ -3300,6 +3300,94 @@
                 "templating"
             ],
             "time": "2017-05-25 22:35:04"
+        },
+        {
+            "name": "youshido/graphql",
+            "version": "v1.4.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Youshido/GraphQL.git",
+                "reference": "11b38db3917e81c80d9280ba613361a91ec6ba60"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Youshido/GraphQL/zipball/11b38db3917e81c80d9280ba613361a91ec6ba60",
+                "reference": "11b38db3917e81c80d9280ba613361a91ec6ba60",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5,<8.0-DEV"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Youshido\\GraphQL\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexandr Viniychuk",
+                    "email": "a@viniychuk.com"
+                },
+                {
+                    "name": "Portey Vasil",
+                    "email": "portey@gmail.com"
+                }
+            ],
+            "description": "Pure PHP GraphQL",
+            "time": "2017-05-08T20:33:04+00:00"
+        },
+        {
+            "name": "youshido/graphql-bundle",
+            "version": "v1.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Youshido/GraphQLBundle.git",
+                "reference": "8c53bf7ece2e90d32b078be9c21d4948ffb6d320"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Youshido/GraphQLBundle/zipball/8c53bf7ece2e90d32b078be9c21d4948ffb6d320",
+                "reference": "8c53bf7ece2e90d32b078be9c21d4948ffb6d320",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5",
+                "youshido/graphql": "~1.4"
+            },
+            "require-dev": {
+                "composer/composer": "~1.2",
+                "phpunit/phpunit": "~4.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Youshido\\GraphQLBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Alexandr Viniychuk",
+                    "email": "a@viniychuk.com"
+                },
+                {
+                    "name": "Portey Vasil",
+                    "email": "portey@gmail.com"
+                }
+            ],
+            "description": "Symfony GraphQl Bundle",
+            "time": "2017-02-17T20:50:24+00:00"
         }
     ],
     "packages-dev": [
@@ -3355,7 +3443,7 @@
                 }
             ],
             "description": "This bundle generates code for you",
-            "time": "2017-03-15T01:02:10+00:00"
+            "time": "2017-03-15 01:02:10"
         },
         {
             "name": "symfony/phpunit-bridge",
@@ -3417,7 +3505,7 @@
             ],
             "description": "Symfony PHPUnit Bridge",
             "homepage": "https://symfony.com",
-            "time": "2017-05-24T11:37:21+00:00"
+            "time": "2017-05-24 11:37:21"
         }
     ],
     "aliases": [],

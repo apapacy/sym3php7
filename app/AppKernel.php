@@ -28,6 +28,8 @@ class AppKernel extends Kernel
             new Sonata\BlockBundle\SonataBlockBundle(),
             new AppBundle\AppBundle(),
             new Blank\AdminBundle\BlankAdminBundle(),
+
+            new Youshido\GraphQLBundle\GraphQLBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
