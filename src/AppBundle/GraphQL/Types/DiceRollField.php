@@ -17,6 +17,14 @@ use Youshido\GraphQL\Field\AbstractField;
 
 class DiceRollField extends AbstractField
 {
+    public function getName() {
+      return 'diceRoll00';
+    }
+
+    public function getDescription() {
+      return 'Это описания поля';
+    }
+
     public function getType()
     {
       return new DiceRollType();

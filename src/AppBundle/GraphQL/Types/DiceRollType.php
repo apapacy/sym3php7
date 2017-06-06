@@ -31,9 +31,16 @@ class DiceRollType extends AbstractObjectType
                         return (!empty($args['truncate'])) ? explode(' ', $source['title'])[0] . '...' : $source['title'];
                     }
                 ],
-                'summary'    => new StringType(),
+                'summary'    => [
+                  'type' => new StringType(),
+                  'description' => 'Это поле содержит некоторый текст'
+                ],
                 'likesCount' => new IntType(),
             ]);
+    }
+
+    public function getDescription() {
+      return 'Это описания типа всцелом';
     }
 
 

@@ -42,7 +42,7 @@ class Schema extends AbstractSchema
                 }
             ]
         ])
-        ->addFields(['diceRoll' => new Types\DiceRollField()])
+        ->addFields([new Types\DiceRollField()])
         ;
     }
 
