@@ -13,7 +13,8 @@ class Schema extends AbstractSchema
 {
     public function build(SchemaConfig $config)
     {
-        $config->getQuery()->addFields([
+        $config->getQuery()
+        ->addFields([
             'hello' => [
                 'type'    => new StringType(),
                 'args'    => [
@@ -26,7 +27,23 @@ class Schema extends AbstractSchema
                     return 'Hello ' . $args['name'];
                 }
             ]
-        ]);
+        ])
+        ->addFields([
+            'hello1' => [
+                'type'    => new StringType(),
+                'args'    => [
+                    'name' => [
+                        'type' => new StringType(),
+                        'defaultValue' => 'Stranger'
+                    ]
+                ],
+                'resolve' => function ($context, $args) {
+                    return 'Hello ' . $args['name'];
+                }
+            ]
+        ])
+        ->addFields(['diceRoll' => new Types\DiceRollField()])
+        ;
     }
 
 }
