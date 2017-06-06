@@ -39,6 +39,7 @@ class DiceRollType extends AbstractObjectType
             ]);
     }
 
+
     public function getDescription() {
       return 'Это описания типа всцелом';
     }
