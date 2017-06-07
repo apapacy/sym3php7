@@ -13,6 +13,11 @@ use Youshido\GraphQL\Type\Scalar\BooleanType;
 
 class DiceRollType extends AbstractObjectType
 {
+
+    public function getName() {
+      return 'dice_roll';
+    }
+
     public function build($config)
     {
             $config->addFields([

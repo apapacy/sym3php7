@@ -17,7 +17,7 @@ use Youshido\GraphQL\Field\AbstractField;
 
 class DiceRollField extends AbstractField
 {
-    public function getName() {
+    public function getName00() {
       return 'diceRoll00';
     }
 
