@@ -31,7 +31,7 @@ class DiceRollField extends AbstractField
     }
 
     public function resolve($value, array $args, ResolveInfo $info) {
-      return ['title' => 'wewew', 'summary' => 'ddfdfdfd', 'likesCount' => 126];
+      return ['title' => 'wewew ererer', 'summary' => 'ddfdfdfd', 'likesCount' => 126];
     }
 
 

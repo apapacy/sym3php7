@@ -24,7 +24,7 @@ class DiceRollType extends AbstractObjectType
                     'args'              => [
                         'truncate' => [
                           'type' => new BooleanType(),
-                          'defaultValue' => false
+                          'defaultValue' => true
                         ]
                     ],
                     'resolve'           => function ($source, $args) {
