@@ -15,6 +15,7 @@ class DefaultController extends Controller
     public function indexAction(Request $request)
     {
         // replace this example code with whatever you need
+        echo time();
         $dm = $this->getDoctrine()->getManager();
         for ($i = 0; $i < 100000; $i++) {
           $product = new Category();
@@ -22,6 +23,7 @@ class DefaultController extends Controller
           $dm->persist($product);
         }
         $dm->flush();
+        echo time();
         return $this->render('BlankAdminBundle:Default:index.html.twig');
 
         return $this->render('default/index.html.twig', [

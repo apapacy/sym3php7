@@ -4,7 +4,7 @@ namespace Blank\AdminBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Blank\AdminBundle\Document\Product;
+use \Blank\AdminBundle\Document\Product;
 
 class DefaultController extends Controller
 {
@@ -22,6 +22,7 @@ class DefaultController extends Controller
     public function testAction()
     {
         $dm = $this->get('doctrine_mongodb')->getManager();
+        echo time();
         for ($i = 0; $i < 100000; $i++) {
           $product = new Product();
           $product->setName("A Foo Bar - $i");
@@ -29,6 +30,7 @@ class DefaultController extends Controller
           $dm->persist($product);
         }
         $dm->flush();
+        echo time();
         return $this->render('BlankAdminBundle:Default:index.html.twig');
     }
 }

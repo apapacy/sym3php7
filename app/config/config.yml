@@ -182,6 +182,9 @@ doctrine_mongodb:
               AppBundle:
                 type: annotation
                 dir: Document
+              BlankAdminBundle:
+                type: annotation
+                dir: Document
                 #prefix: 'AcmeStoreBundle:Entity'
 
 # Swiftmailer Configuration
